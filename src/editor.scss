@@ -1,0 +1,23 @@
+// Editor stíluslap
+
+// A szerkesztőben a blokk kap egy alapértelmezett szélességet,
+// amit felülírunk, hogy az igazítás látható legyen.
+.wp-block[data-type="wphu/gorgetes-animacio-blokk"] {
+    width: 100%;
+}
+
+// Az SVG elemeinek stílusa a CSS változóval (ugyanaz, mint a style.scss-ben)
+.scroll-mouse-body {
+    fill: none;
+    stroke: var(--mouse-icon-color, #333);
+    stroke-width: 2;
+}
+
+.scroll-mouse-wheel {
+    fill: var(--mouse-icon-color, #333);
+    animation: scroll-wheel-animation-svg 2s infinite;
+}
+
+// Az animáció itt is szükséges a valós idejű előnézethez.
+// A keyframes definíciót elég egyszer betölteni, a style.scss-ből örökölni fogja,
+// de a biztonság kedvéért itt is leírhatjuk. Az @import elegánsabb lenne.

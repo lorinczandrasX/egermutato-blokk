@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "wphu/gorgetes-animacio-blokk",
+    "version": "1.2.0",
+    "title": "Görgetés Animáció (Egér)",
+    "category": "design",
+    "icon": "arrow-down-alt2",
+    "description": "Megjelenít egy animált egeret, ami a görgetésre elhalványul.",
+    "supports": {
+        "html": false,
+        "align": [ "left", "center", "right" ]
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "color": {
+            "type": "string",
+            "default": "#333333"
+        }
+    },
+    "textdomain": "gorgetes-animacio-blokk",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "script": "file:./scroll-fade.js",
+    "render": "file:./render.php"
+}

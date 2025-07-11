@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".wp-block-wphu-gorgetes-animacio-blokk");if(!e)return;let t=!1;const n=()=>{const n=window.scrollY;let o=1;n>100&&(o=1-(n-100)/150),e.style.opacity=Math.max(0,Math.min(1,o)),t=!1};window.addEventListener("scroll",()=>{t||(window.requestAnimationFrame(n),t=!0)})});

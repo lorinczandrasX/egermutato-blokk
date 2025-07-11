@@ -1,0 +1,60 @@
+// Frontend stíluslap
+
+// Az igazítási szabályok
+.wp-block-wphu-gorgetes-animacio-blokk {
+    position: relative;
+    min-height: 70px;
+    display: block;
+    transition: opacity 0.15s linear;
+
+    > svg {
+        position: absolute;
+        top: 50%;
+    }
+    
+    &.alignleft > svg {
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &.aligncenter > svg {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.alignright > svg {
+        right: 0;
+        left: auto;
+        transform: translateY(-50%);
+    }
+}
+
+// Az SVG elemeinek stílusa a CSS változóval
+.scroll-mouse-body {
+    fill: none;
+    stroke: var(--mouse-icon-color, #333);
+    stroke-width: 2;
+}
+
+.scroll-mouse-wheel {
+    fill: var(--mouse-icon-color, #333);
+    animation: scroll-wheel-animation-svg 2s infinite;
+}
+
+// Az animáció
+@keyframes scroll-wheel-animation-svg {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    15% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
